@@ -9,7 +9,6 @@
 // @supportURL   https://github.com/beltranamenabar/userscripts/issues
 // @match        https://givee.club/*
 // @grant        none
-// @run-at       document-start
 // ==/UserScript==
 
 (function() {
