@@ -5,7 +5,7 @@
 // @description  Removes the giveaways or ads that aren't related to the page in the "All active giveaways" section
 // @homepageURL  https://github.com/beltranamenabar/userscripts
 // @icon         https://givee.club/favicon.ico
-// @updateURL    https://github.com/beltranamenabar/userscripts/raw/master/givee.club.user.js
+// @updateURL    https://github.com/beltranamenabar/userscripts/raw/main/givee.club.user.js
 // @supportURL   https://github.com/beltranamenabar/userscripts/issues
 // @match        https://givee.club/*
 // @grant        none
