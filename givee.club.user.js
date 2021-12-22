@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Givee Club non-giveaway remover
-// @version      1.0
+// @version      1.1
 // @author       Beltrán Amenábar (https://github.com/beltranamenabar)
 // @description  Removes the giveaways or ads that aren't related to the page in the "All active giveaways" section
 // @homepageURL  https://github.com/beltranamenabar/userscripts
