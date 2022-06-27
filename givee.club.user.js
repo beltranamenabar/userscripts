@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         Givee Club non-giveaway remover
-// @version      1.2
+// @name         Givee Club non-giveaway remover (and more)
+// @version      1.3
 // @author       Beltrán Amenábar (https://github.com/beltranamenabar)
 // @description  Removes the giveaways or ads that aren't related to the page in the "All active giveaways" section
 // @homepageURL  https://github.com/beltranamenabar/userscripts
@@ -34,4 +34,24 @@
     document.querySelectorAll(".event-platform-epicgames").forEach(nonGiveaway => {
         nonGiveaway.parentElement.parentElement.parentElement.remove();
     });
+
+    // Change steam wishlist modals for a direct link (as it was before)
+    document.querySelectorAll("a.pseudo").forEach(game => {
+        let app_id = game.getAttribute("data-steam-wishlist-appid");
+        if (app_id) {
+            // change the element to a direct url
+            let new_element = document.createElement("a")
+            new_element.href = "https://store.steampowered.com/app/" + app_id;
+            new_element.textContent = game.textContent;
+            new_element.target = "_blank";
+
+            // Delete the actual element and replace it with the new one,
+            // because it triggers the modal opening when clicked
+            let parent = game.parentElement;
+            game.remove();
+            parent.appendChild(new_element);
+        }
+
+    });
+
 })();
